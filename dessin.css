@@ -1,0 +1,113 @@
+.bg {
+  background: linear-gradient(to bottom, rgb(32, 224, 208), rgb(17, 204, 117));
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.tt {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 650px;
+  height: 500px;
+  background-color: whitesmoke;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.disc /* carré de 230 sur 230 avec un radius de 50% qui transforme le carré en cercle parfait*/
+ {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: rgb(34, 25, 25);
+  box-shadow: 5px 5px 3px rgb(112, 105, 105);
+}
+
+.disc::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  border: solid 3px red;
+  z-index: 100; /* permet de mettre des priorité de plan*/
+}
+
+.label {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: yellow;
+  animation: spin 4s linear infinite;
+}
+
+.label::before,
+.label::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.label::before {
+  width: 130px;
+  height: 130px;
+  background: yellow;
+  border: solid 1px #ff4d80;
+}
+
+.label::after {
+  width: 120px;
+  height: 60px;
+  bottom: 60px;
+  background: orangered;
+  border-radius: 60px 60px 0 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.texte {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: black;
+  padding: 27px;
+  z-index: 10000;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+}
